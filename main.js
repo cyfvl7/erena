@@ -1,5 +1,3 @@
-require('dotenv').config();
-console.log("TOKEN:", process.env.DISCORD_TOKEN);
 const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
 const client = new Client({
   intents: [
@@ -66,4 +64,4 @@ client.on(Events.InteractionCreate, async interaction => {
 	}
 });
 
-client.login(process.env.DISCORD_TOKEN);
+client.login(process.env.TOKEN);
